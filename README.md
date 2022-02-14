@@ -1,24 +1,5 @@
-# navigate-page
+# 罪恶枷锁配方
 
-## Project setup
-```
-yarn install
-```
+编年史上去太卡了，看起来也不方便所以弄一个。
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+>ps: 正在施工。
