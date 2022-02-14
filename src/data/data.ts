@@ -1,4 +1,17 @@
-export const data = [
+export interface ItemData {
+    id?: number,
+    type?: string,
+    name?: string,
+    explicitMod?: string,
+    currencyList?: string[],
+    spe?: string,
+    icon?: string,
+    formula?: number[],
+    level?: string,
+    localIcon?: string,
+}
+
+export const data: ItemData[] = [
     {
         id: 1,
         type: '1',
@@ -12,7 +25,7 @@ export const data = [
         icon: 'https://poe.game.qq.com/image/Art/2DItems/Currency/Archnemesis/ModRareKillPoison.png',
         formula: [],
         level: 'common',
-        localIcon: './icon/ModRareKillPoison.png',
+        localIcon: 'ModRareKillPoison.png',
     },
     {
         id: 2,
@@ -26,7 +39,7 @@ export const data = [
         icon: 'https://poe.game.qq.com/image/Art/2DItems/Currency/Archnemesis/ModRareKillVoidtouched.png',
         formula: [],
         level: 'common',
-        localIcon: './icon/ModRareKillVoidtouched.png',
+        localIcon: 'ModRareKillVoidtouched.png',
     },
     {
         id: 3,
@@ -40,7 +53,7 @@ export const data = [
         icon: 'https://poe.game.qq.com/image/Art/2DItems/Currency/Archnemesis/ModRareKillFrosttouched.png',
         formula: [],
         level: 'common',
-        localIcon: './icon/ModRareKillFrosttouched.png',
+        localIcon: 'ModRareKillFrosttouched.png',
     },
     {
         id: 4,
@@ -55,7 +68,7 @@ export const data = [
         icon: 'https://poe.game.qq.com/image/Art/2DItems/Currency/Archnemesis/ModRareKillFreezer.png',
         formula: [],
         level: 'common',
-        localIcon: './icon/ModRareKillFreezer.png',
+        localIcon: 'ModRareKillFreezer.png',
     },
     {
         id: 5,
@@ -69,7 +82,7 @@ export const data = [
         icon: 'https://poe.game.qq.com/image/Art/2DItems/Currency/Archnemesis/ModRareKillSpeed.png',
         formula: [],
         level: 'common',
-        localIcon: './icon/ModRareKillSpeed.png',
+        localIcon: 'ModRareKillSpeed.png',
     },
     {
         id: 6,
@@ -84,7 +97,7 @@ export const data = [
         icon: 'https://poe.game.qq.com/image/Art/2DItems/Currency/Archnemesis/ModRareKillDeadeye.png',
         formula: [],
         level: 'common',
-        localIcon: './icon/ModRareKillDeadeye.png',
+        localIcon: 'ModRareKillDeadeye.png',
     },
     {
         id: 7,
@@ -99,7 +112,7 @@ export const data = [
         icon: 'https://poe.game.qq.com/image/Art/2DItems/Currency/Archnemesis/ModRareKillBombardier.png',
         formula: [],
         level: 'common',
-        localIcon: './icon/ModRareKillBombardier.png',
+        localIcon: 'ModRareKillBombardier.png',
     },
     {
         id: 8,
@@ -113,7 +126,7 @@ export const data = [
         icon: 'https://poe.game.qq.com/image/Art/2DItems/Currency/Archnemesis/ModRareKillFlametouched.png',
         formula: [],
         level: 'common',
-        localIcon: './icon/ModRareKillFlametouched.png',
+        localIcon: 'ModRareKillFlametouched.png',
     },
     {
         id: 9,
@@ -128,7 +141,7 @@ export const data = [
         icon: 'https://poe.game.qq.com/image/Art/2DItems/Currency/Archnemesis/ModRareKillFire.png',
         formula: [],
         level: 'common',
-        localIcon: './icon/ModRareKillFire.png',
+        localIcon: 'ModRareKillFire.png',
     },
     {
         id: 10,
@@ -142,7 +155,7 @@ export const data = [
         icon: 'https://poe.game.qq.com/image/Art/2DItems/Currency/Archnemesis/ModRareKillEnergyShield.png',
         formula: [],
         level: 'common',
-        localIcon: './icon/ModRareKillEnergyShield.png',
+        localIcon: 'ModRareKillEnergyShield.png',
     },
     {
         id: 11,
@@ -157,7 +170,7 @@ export const data = [
         icon: 'https://poe.game.qq.com/image/Art/2DItems/Currency/Archnemesis/ModRareKillCaster.png',
         formula: [],
         level: 'common',
-        localIcon: './icon/ModRareKillCaster.png',
+        localIcon: 'ModRareKillCaster.png',
     },
     {
         id: 12,
@@ -171,7 +184,7 @@ export const data = [
         icon: 'https://poe.game.qq.com/image/Art/2DItems/Currency/Archnemesis/ModRareKillStormtouched.png',
         formula: [],
         level: 'common',
-        localIcon: './icon/ModRareKillStormtouched.png',
+        localIcon: 'ModRareKillStormtouched.png',
     },
     {
         id: 13,
@@ -186,7 +199,7 @@ export const data = [
         icon: 'https://poe.game.qq.com/image/Art/2DItems/Currency/Archnemesis/ModRareKillShocker.png',
         formula: [],
         level: 'common',
-        localIcon: './icon/ModRareKillShocker.png',
+        localIcon: 'ModRareKillShocker.png',
     },
     {
         id: 14,
@@ -201,7 +214,7 @@ export const data = [
         icon: 'https://poe.game.qq.com/image/Art/2DItems/Currency/Archnemesis/ModRareKillBonebreaker.png',
         formula: [],
         level: 'common',
-        localIcon: './icon/ModRareKillBonebreaker.png',
+        localIcon: 'ModRareKillBonebreaker.png',
     },
     {
         id: 15,
@@ -216,7 +229,7 @@ export const data = [
         icon: 'https://poe.game.qq.com/image/Art/2DItems/Currency/Archnemesis/ModRareKillBloodletter.png',
         formula: [],
         level: 'common',
-        localIcon: './icon/ModRareKillBloodletter.png',
+        localIcon: 'ModRareKillBloodletter.png',
     },
     {
         id: 16,
@@ -230,7 +243,7 @@ export const data = [
         icon: 'https://poe.game.qq.com/image/Art/2DItems/Currency/Archnemesis/ModRareKillSteelattuned.png',
         formula: [],
         level: 'common',
-        localIcon: './icon/ModRareKillSteelattuned.png',
+        localIcon: 'ModRareKillSteelattuned.png',
     },
     {
         id: 17,
@@ -244,7 +257,7 @@ export const data = [
         icon: 'https://poe.game.qq.com/image/Art/2DItems/Currency/Archnemesis/ModRareKillGargantuan.png',
         formula: [],
         level: 'common',
-        localIcon: './icon/ModRareKillGargantuan.png',
+        localIcon: 'ModRareKillGargantuan.png',
     },
     {
         id: 18,
@@ -258,7 +271,7 @@ export const data = [
         icon: 'https://poe.game.qq.com/image/Art/2DItems/Currency/Archnemesis/ModRareKillRage.png',
         formula: [],
         level: 'common',
-        localIcon: './icon/ModRareKillRage.png',
+        localIcon: 'ModRareKillRage.png',
     },
     {
         id: 19,
@@ -273,7 +286,7 @@ export const data = [
         icon: 'https://poe.game.qq.com/image/Art/2DItems/Currency/Archnemesis/ModRareKillDefender.png',
         formula: [],
         level: 'common',
-        localIcon: './icon/ModRareKillDefender.png',
+        localIcon: 'ModRareKillDefender.png',
     },
     {
         id: 20,
@@ -287,7 +300,7 @@ export const data = [
         icon: 'https://poe.game.qq.com/image/Art/2DItems/Currency/Archnemesis/ModRareKillJuggernaut.png',
         formula: [],
         level: 'common',
-        localIcon: './icon/ModRareKillJuggernaut.png',
+        localIcon: 'ModRareKillJuggernaut.png',
     },
     {
         id: 21,
@@ -301,7 +314,7 @@ export const data = [
         icon: 'https://poe.game.qq.com/image/Art/2DItems/Currency/Archnemesis/ModRareKillVampiric.png',
         formula: [],
         level: 'common',
-        localIcon: './icon/ModRareKillVampiric.png',
+        localIcon: 'ModRareKillVampiric.png',
     },
     {
         id: 22,
@@ -316,7 +329,7 @@ export const data = [
         icon: 'https://poe.game.qq.com/image/Art/2DItems/Currency/Archnemesis/ModRareKillChargegenerator.png',
         formula: [],
         level: 'common',
-        localIcon: './icon/ModRareKillChargegenerator.png',
+        localIcon: 'ModRareKillChargegenerator.png',
     },
     {
         id: 23,
@@ -330,7 +343,7 @@ export const data = [
         icon: 'https://poe.game.qq.com/image/Art/2DItems/Currency/Archnemesis/ModRareKillSoulconduit.png',
         formula: [],
         level: 'common',
-        localIcon: './icon/ModRareKillSoulconduit.png',
+        localIcon: 'ModRareKillSoulconduit.png',
     },
     {
         id: 24,
@@ -342,7 +355,7 @@ export const data = [
         icon: 'https://poe.game.qq.com/image/Art/2DItems/Currency/Archnemesis/ModRareKillWealthy.png',
         formula: [],
         level: 'common',
-        localIcon: './icon/ModRareKillWealthy.png',
+        localIcon: 'ModRareKillWealthy.png',
     },
     {
         id: 25,
@@ -356,7 +369,7 @@ export const data = [
         icon: 'https://poe.game.qq.com/image/Art/2DItems/Currency/Archnemesis/ModRareKillOppressor.png',
         formula: [],
         level: 'common',
-        localIcon: './icon/ModRareKillOppressor.png',
+        localIcon: 'ModRareKillOppressor.png',
     },
     {
         id: 26,
@@ -370,7 +383,7 @@ export const data = [
         icon: 'https://poe.game.qq.com/image/Art/2DItems/Currency/Archnemesis/ModRareKillConsecration.png',
         formula: [],
         level: 'common',
-        localIcon: './icon/ModRareKillConsecration.png',
+        localIcon: 'ModRareKillConsecration.png',
     },
     {
         id: 27,
@@ -385,7 +398,7 @@ export const data = [
         icon: 'https://poe.game.qq.com/image/Art/2DItems/Currency/Archnemesis/ModRareKillRampage.png',
         formula: [],
         level: 'common',
-        localIcon: './icon/ModRareKillRampage.png',
+        localIcon: 'ModRareKillRampage.png',
     },
     {
         id: 28,
@@ -403,7 +416,7 @@ export const data = [
             10,
         ],
         level: 'magic',
-        localIcon: './icon/ModRecipeHeraldoftheobelisk.png',
+        localIcon: 'ModRecipeHeraldoftheobelisk.png',
     },
     {
         id: 29,
@@ -422,7 +435,7 @@ export const data = [
             17,
         ],
         level: 'magic',
-        localIcon: './icon/ModRecipeUnionofsouls.png',
+        localIcon: 'ModRecipeUnionofsouls.png',
     },
     {
         id: 30,
@@ -440,7 +453,7 @@ export const data = [
             21,
         ],
         level: 'magic',
-        localIcon: './icon/ModRecipeAssassin.png',
+        localIcon: 'ModRecipeAssassin.png',
     },
     {
         id: 31,
@@ -460,7 +473,7 @@ export const data = [
             11,
         ],
         level: 'magic',
-        localIcon: './icon/ModRecipeTrickster.png',
+        localIcon: 'ModRecipeTrickster.png',
     },
     {
         id: 32,
@@ -477,7 +490,7 @@ export const data = [
             22,
         ],
         level: 'magic',
-        localIcon: './icon/ModRecipeNecromancer.png',
+        localIcon: 'ModRecipeNecromancer.png',
     },
     {
         id: 33,
@@ -494,7 +507,7 @@ export const data = [
             21,
         ],
         level: 'magic',
-        localIcon: './icon/ModRecipeRejuvenating.png',
+        localIcon: 'ModRecipeRejuvenating.png',
     },
     {
         id: 34,
@@ -512,7 +525,7 @@ export const data = [
             18,
         ],
         level: 'magic',
-        localIcon: './icon/ModRecipeExecutioner.png',
+        localIcon: 'ModRecipeExecutioner.png',
     },
     {
         id: 35,
@@ -530,7 +543,7 @@ export const data = [
             11,
         ],
         level: 'magic',
-        localIcon: './icon/ModRecipeHexer.png',
+        localIcon: 'ModRecipeHexer.png',
     },
     {
         id: 36,
@@ -548,7 +561,7 @@ export const data = [
             6,
         ],
         level: 'magic',
-        localIcon: './icon/ModRecipeFlaskdrain.png',
+        localIcon: 'ModRecipeFlaskdrain.png',
     },
     {
         id: 37,
@@ -566,7 +579,7 @@ export const data = [
             15,
         ],
         level: 'magic',
-        localIcon: './icon/ModRecipeGraspingVines.png',
+        localIcon: 'ModRecipeGraspingVines.png',
     },
     {
         id: 38,
@@ -585,7 +598,7 @@ export const data = [
             10,
         ],
         level: 'magic',
-        localIcon: './icon/ModRecipeTimeBubble.png',
+        localIcon: 'ModRecipeTimeBubble.png',
     },
     {
         id: 39,
@@ -603,7 +616,7 @@ export const data = [
             16,
         ],
         level: 'magic',
-        localIcon: './icon/ModRecipeSaplings.png',
+        localIcon: 'ModRecipeSaplings.png',
     },
     {
         id: 40,
@@ -622,7 +635,7 @@ export const data = [
             5,
         ],
         level: 'magic',
-        localIcon: './icon/ModRecipeFrostwalker.png',
+        localIcon: 'ModRecipeFrostwalker.png',
     },
     {
         id: 41,
@@ -640,7 +653,7 @@ export const data = [
             19,
         ],
         level: 'magic',
-        localIcon: './icon/ModRecipeCold.png',
+        localIcon: 'ModRecipeCold.png',
     },
     {
         id: 42,
@@ -659,7 +672,7 @@ export const data = [
             17,
         ],
         level: 'magic',
-        localIcon: './icon/ModRecipeSouleater.png',
+        localIcon: 'ModRecipeSouleater.png',
     },
     {
         id: 43,
@@ -678,7 +691,7 @@ export const data = [
             5,
         ],
         level: 'magic',
-        localIcon: './icon/ModRecipeFire.png',
+        localIcon: 'ModRecipeFire.png',
     },
     {
         id: 44,
@@ -696,7 +709,7 @@ export const data = [
             9,
         ],
         level: 'magic',
-        localIcon: './icon/ModRecipeCorpseeploder.png',
+        localIcon: 'ModRecipeCorpseeploder.png',
     },
     {
         id: 45,
@@ -717,7 +730,7 @@ export const data = [
             12,
         ],
         level: 'magic',
-        localIcon: './icon/ModRecipePrismatic.png',
+        localIcon: 'ModRecipePrismatic.png',
     },
     {
         id: 46,
@@ -735,7 +748,7 @@ export const data = [
             14,
         ],
         level: 'magic',
-        localIcon: './icon/ModRecipeVolatileflameblood.png',
+        localIcon: 'ModRecipeVolatileflameblood.png',
     },
     {
         id: 47,
@@ -752,7 +765,7 @@ export const data = [
             23,
         ],
         level: 'magic',
-        localIcon: './icon/ModRecipeMirrorImage.png',
+        localIcon: 'ModRecipeMirrorImage.png',
     },
     {
         id: 48,
@@ -771,7 +784,7 @@ export const data = [
             5,
         ],
         level: 'magic',
-        localIcon: './icon/ModRecipeLightningwalker.png',
+        localIcon: 'ModRecipeLightningwalker.png',
     },
     {
         id: 49,
@@ -789,7 +802,7 @@ export const data = [
             13,
         ],
         level: 'magic',
-        localIcon: './icon/ModRecipeManaDonut.png',
+        localIcon: 'ModRecipeManaDonut.png',
     },
     {
         id: 50,
@@ -807,7 +820,7 @@ export const data = [
             2,
         ],
         level: 'magic',
-        localIcon: './icon/ModRecipeCorrupter.png',
+        localIcon: 'ModRecipeCorrupter.png',
     },
     {
         id: 51,
@@ -826,7 +839,7 @@ export const data = [
             26,
         ],
         level: 'magic',
-        localIcon: './icon/ModRecipeDivinetouched.png',
+        localIcon: 'ModRecipeDivinetouched.png',
     },
     {
         id: 52,
@@ -845,7 +858,7 @@ export const data = [
             18,
         ],
         level: 'magic',
-        localIcon: './icon/ModRecipeLivingCrystal.png',
+        localIcon: 'ModRecipeLivingCrystal.png',
     },
     {
         id: 53,
@@ -864,7 +877,7 @@ export const data = [
             2,
         ],
         level: 'magic',
-        localIcon: './icon/ModRecipeCycleofelements.png',
+        localIcon: 'ModRecipeCycleofelements.png',
     },
     {
         id: 54,
@@ -883,7 +896,7 @@ export const data = [
             50,
         ],
         level: 'magic',
-        localIcon: './icon/ModRecipeVoodoodoll.png',
+        localIcon: 'ModRecipeVoodoodoll.png',
     },
     {
         id: 55,
@@ -901,7 +914,7 @@ export const data = [
             29,
         ],
         level: 'rare',
-        localIcon: './icon/ModPantheonLunaris.png',
+        localIcon: 'ModPantheonLunaris.png',
     },
     {
         id: 56,
@@ -919,7 +932,7 @@ export const data = [
             29,
         ],
         level: 'rare',
-        localIcon: './icon/ModPantheonSolaris.png',
+        localIcon: 'ModPantheonSolaris.png',
     },
     {
         id: 57,
@@ -937,7 +950,7 @@ export const data = [
             30,
         ],
         level: 'rare',
-        localIcon: './icon/ModPantheonArakaali.png',
+        localIcon: 'ModPantheonArakaali.png',
     },
     {
         id: 58,
@@ -957,7 +970,7 @@ export const data = [
             28,
         ],
         level: 'rare',
-        localIcon: './icon/ModPantheonBrineking.png',
+        localIcon: 'ModPantheonBrineking.png',
     },
     {
         id: 59,
@@ -977,7 +990,7 @@ export const data = [
             46,
         ],
         level: 'rare',
-        localIcon: './icon/ModPantheonTukohama.png',
+        localIcon: 'ModPantheonTukohama.png',
     },
     {
         id: 60,
@@ -997,7 +1010,7 @@ export const data = [
             33,
         ],
         level: 'rare',
-        localIcon: './icon/ModPantheonAbberath.png',
+        localIcon: 'ModPantheonAbberath.png',
     },
     {
         id: 61,
@@ -1015,7 +1028,7 @@ export const data = [
             36,
         ],
         level: 'rare',
-        localIcon: './icon/ModPantheonShakari.png',
+        localIcon: 'ModPantheonShakari.png',
     },
     {
         id: 62,
@@ -1036,7 +1049,7 @@ export const data = [
             49,
         ],
         level: 'unique',
-        localIcon: './icon/ModPantheonInnocence.png',
+        localIcon: 'ModPantheonInnocence.png',
     },
     {
         id: 63,
@@ -1055,7 +1068,7 @@ export const data = [
             44,
         ],
         level: 'unique',
-        localIcon: './icon/ModPantheonKitava.png',
+        localIcon: 'ModPantheonKitava.png',
     },
 ];
 
