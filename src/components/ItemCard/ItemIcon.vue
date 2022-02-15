@@ -1,7 +1,9 @@
 <template>
-  <div class="item-icon" :class="props.size">
-    <img :src="`data/icon/${current.localIcon}`" />
-    <div class="item-name">
+  <div class="item-icon-wrap" :class="props.size">
+    <div class="item-icon">
+      <img :src="`data/icon/${current.localIcon}`" />
+    </div>
+    <div class="item-name" v-if="name">
       <p :class="current.level">{{ current.name }}</p>
     </div>
   </div>
@@ -22,6 +24,10 @@ const props = defineProps({
     type: String as PropType<SizeDic>,
     default: 'large',
   },
+  name: {
+    type: Boolean,
+    default: false,
+  },
 });
 const current: Ref<ItemData> = ref({});
 onMounted(() => {
@@ -32,24 +38,29 @@ onMounted(() => {
 </script>
 
 <style lang="less">
-.item-icon {
-  width: 100px;
-  cursor: pointer;
+.item-icon-wrap {
   margin-bottom: 8px;
-  font-size: var(--font-xs);
+  width: 80px;
+  .item-icon {
+    cursor: pointer;
+    font-size: var(--font-xs);
+  }
   .item-name {
     text-align: center;
   }
   img {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     object-fit: cover;
-    margin: 0 auto 0 auto;
+    margin: 0 auto;
     display: block;
   }
   &.small {
-    width: 50px;
+    width: 80px;
     font-size: var(--font-xxs);
+    .item-name {
+      transform: scale(.8);
+    }
     img {
       width: 40px;
       height: 40px;
@@ -62,10 +73,9 @@ onMounted(() => {
       width: 25px;
       height: 25px;
     }
-    .item-name {
-      // transform: scale(0.6);
-      display: none;
-    }
+    // .item-name {
+    //   display: none;
+    // }
   }
 }
 </style>
