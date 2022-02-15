@@ -96,7 +96,6 @@ onMounted(() => {
   border-radius: var(--border-radius);
   width: 100%;
   font-size: var(--font-s);
-  position: relative;
   &__header {
     display: flex;
     flex-flow: row nowrap;
@@ -149,7 +148,7 @@ onMounted(() => {
     padding: 16px;
     border-radius: 8px;
     border: 1px solid #aaa;
-    z-index: 5;
+    z-index: 100;
   }
 }
 p.common {
