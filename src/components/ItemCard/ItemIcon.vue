@@ -1,10 +1,17 @@
 <template>
-  <div class="item-icon-wrap" :class="props.size">
+  <div class="item-icon-wrap" :class="[props.size, hover && 'hover']">
     <div class="item-icon">
       <img :src="`data/icon/${current.localIcon}`" />
     </div>
     <div class="item-name" v-if="name">
       <p :class="current.level">{{ current.name }}</p>
+    </div>
+    <div class="item-formula icon-pop-box" v-if="current.formula?.length && props.hover">
+      <div class="formula-list">
+        <template v-for="(formula) in current.formula" :key="formula">
+          <ItemIcon :id="formula" name size="small"></ItemIcon>
+        </template>
+      </div>
     </div>
   </div>
 </template>
@@ -28,6 +35,10 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
+  hover: {
+    type: Boolean,
+    default: false,
+  },
 });
 const current: Ref<ItemData> = ref({});
 onMounted(() => {
@@ -41,6 +52,27 @@ onMounted(() => {
 .item-icon-wrap {
   margin-bottom: 8px;
   width: 80px;
+  // position: relative;
+  // z-index: 10;
+  .item-formula.icon-pop-box {
+    position: absolute;
+    left: 0;
+    transform: translateY(50%);
+    top: 30px;
+    background-color: rgba(10, 10, 10, 0.8);
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px solid #aaa;
+    display: none;
+    z-index: 10;
+  }
+  &.hover {
+    &:hover {
+      .icon-pop-box {
+        display: block;
+      }
+    }
+  }
   .item-icon {
     cursor: pointer;
     font-size: var(--font-xs);
@@ -59,7 +91,7 @@ onMounted(() => {
     width: 80px;
     font-size: var(--font-xxs);
     .item-name {
-      transform: scale(.8);
+      transform: scale(0.8);
     }
     img {
       width: 40px;

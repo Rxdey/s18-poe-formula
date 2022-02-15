@@ -13,7 +13,7 @@
           <div class="item-formula pop-box" v-show="showIncludes">
             <div class="formula-list">
               <template v-for="(includesData) in includesList" :key="includesData.id">
-                <ItemIcon :id="includesData.id" name></ItemIcon>
+                <ItemIcon :id="includesData.id" name hover></ItemIcon>
               </template>
             </div>
           </div>
@@ -149,6 +149,7 @@ onMounted(() => {
     padding: 16px;
     border-radius: 8px;
     border: 1px solid #aaa;
+    z-index: 5;
   }
 }
 p.common {
