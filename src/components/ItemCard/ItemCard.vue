@@ -34,7 +34,7 @@
       <div class="formula-list">
         <template v-for="(formula, i) in props.data.formula" :key="formula">
           <div v-if="!!i">+</div>
-          <ItemIcon :id="formula" size="small" name></ItemIcon>
+          <ItemIcon :id="formula" size="small" name hover></ItemIcon>
         </template>
       </div>
     </div>
