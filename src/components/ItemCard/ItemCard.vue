@@ -9,7 +9,7 @@
       <p class="common">{{ props.data.spe }}</p>
     </div>
     <div class="item-formula">
-      <ItemIcon v-for="(formula) in props.data.formula" :key="formula" :id="formula" size="small"></ItemIcon>
+      <ItemIcon v-for="(formula) in props.data.formula" :key="formula" :id="formula" size="mini"></ItemIcon>
     </div>
   </div>
 </template>
@@ -46,20 +46,7 @@ const props = defineProps({
   flex-flow: row nowrap;
   font-size: var(--font-s);
   align-items: center;
-  img {
-    width: 60px;
-    height: 60px;
-    object-fit: cover;
-    margin: 0 auto 0 auto;
-    display: block;
-  }
-  .item-icon {
-    width: 100px;
-    cursor: pointer;
-  }
-  .item-name {
-    text-align: center;
-  }
+
 }
 .item-detail {
   flex: 1;
@@ -77,7 +64,7 @@ const props = defineProps({
   display: flex;
   flex-flow: row wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   width: 300px;
 }
 p.common {

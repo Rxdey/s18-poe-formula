@@ -11,7 +11,7 @@
 import { ref, onMounted, computed, defineProps, Ref, PropType } from 'vue';
 import { data, ItemData } from '@/data/data';
 
-export type SizeDic = | 'large' | 'small';
+export type SizeDic = | 'large' | 'small' | 'mini';
 
 const props = defineProps({
   id: {
@@ -33,13 +33,38 @@ onMounted(() => {
 
 <style lang="less">
 .item-icon {
+  width: 100px;
+  cursor: pointer;
   margin-bottom: 8px;
+  font-size: var(--font-xs);
+  .item-name {
+    text-align: center;
+  }
+  img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin: 0 auto 0 auto;
+    display: block;
+  }
   &.small {
     width: 50px;
     font-size: var(--font-xxs);
     img {
       width: 40px;
       height: 40px;
+    }
+  }
+  &.mini {
+    width: 30px;
+    font-size: var(--font-xxs);
+    img {
+      width: 25px;
+      height: 25px;
+    }
+    .item-name {
+      // transform: scale(0.6);
+      display: none;
     }
   }
 }
