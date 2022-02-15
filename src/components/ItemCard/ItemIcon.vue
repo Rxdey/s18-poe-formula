@@ -1,7 +1,7 @@
 <template>
   <div class="item-icon-wrap" :class="[props.size, hover && 'hover']">
     <div class="item-icon">
-      <img :src="`data/icon/${current.localIcon}`" />
+      <img :src="`data/icon/${current.localIcon}`" v-if="current.localIcon"/>
     </div>
     <div class="item-name" v-if="name">
       <p :class="current.level">{{ current.name }}</p>
