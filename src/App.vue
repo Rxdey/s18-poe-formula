@@ -1,6 +1,6 @@
 <template>
   <div class="page-wrap">
-    <p style="margin-bottom: 16px;">鼠标点击可以让悬浮窗停留,可合成的物品再点击可以一直查看最细类（随便用着吧）</p>
+    <p style="margin-bottom: 16px;">鼠标点击可以让悬浮窗停留，再次点击隐藏。点图标可以查看最细类。鼠标放在可合成可以查看可合成项。如果重叠的话把之前点开的关掉（随便用着吧）</p>
     <section class="items-wrap">
       <div class="items-list">
         <!-- <div class="items-card" v-for="(item, i) in items" :key="i">
