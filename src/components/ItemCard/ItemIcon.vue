@@ -1,15 +1,21 @@
 <template>
-  <div class="item-icon-wrap" :class="[props.size, hover && 'hover']">
+  <div
+    class="item-icon-wrap"
+    :class="[props.size]"
+    @mouseover="onMouseOver"
+    @mouseleave="onMouseLeave"
+    @click.stop="onClick"
+  >
     <div class="item-icon">
-      <img :src="`data/icon/${current.localIcon}`" v-if="current.localIcon"/>
+      <img :src="`data/icon/${current.localIcon}`" v-if="current.localIcon" />
     </div>
     <div class="item-name" v-if="name">
       <p :class="current.level">{{ current.name }}</p>
     </div>
-    <div class="item-formula icon-pop-box" v-if="current.formula?.length && props.hover">
+    <div class="item-formula icon-pop-box" v-if="current.formula?.length && props.hover" v-show="showIncludes">
       <div class="formula-list">
         <template v-for="(formula) in current.formula" :key="formula">
-          <ItemIcon :id="formula" name size="small"></ItemIcon>
+          <ItemIcon :id="formula" name size="small" hover></ItemIcon>
         </template>
       </div>
     </div>
@@ -41,6 +47,27 @@ const props = defineProps({
   },
 });
 const current: Ref<ItemData> = ref({});
+// 原来没准备设置多级，看着还是不方便，前面的拷过来吧
+const clickLock = ref(false);
+const showIncludes = ref(false);
+const onMouseOver = () => {
+  if (clickLock.value) return;
+  showIncludes.value = true;
+};
+const onMouseLeave = () => {
+  if (clickLock.value) return;
+  showIncludes.value = false;
+};
+const onClick = () => {
+  if (showIncludes.value && !clickLock.value) {
+    showIncludes.value = true;
+    clickLock.value = true;
+    return;
+  }
+  showIncludes.value = !showIncludes.value;
+  clickLock.value = showIncludes.value;
+  // showIncludes.value = !showIncludes.value;
+};
 onMounted(() => {
   const temp = data.find((item) => item.id === props.id);
   if (!temp) return;
@@ -52,26 +79,17 @@ onMounted(() => {
 .item-icon-wrap {
   margin-bottom: 8px;
   width: 80px;
-  // position: relative;
-  // z-index: 10;
+  position: relative;
   .item-formula.icon-pop-box {
     position: absolute;
     left: 0;
     transform: translateY(50%);
-    top: 30px;
+    top: 20px;
     background-color: rgba(10, 10, 10, 0.8);
     padding: 16px;
     border-radius: 8px;
     border: 1px solid #aaa;
-    display: none;
     z-index: 100;
-  }
-  &.hover {
-    &:hover {
-      .icon-pop-box {
-        display: block;
-      }
-    }
   }
   .item-icon {
     cursor: pointer;

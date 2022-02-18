@@ -1,5 +1,6 @@
 <template>
   <div class="page-wrap">
+    <p style="margin-bottom: 16px;">鼠标点击可以让悬浮窗停留,可合成的物品再点击可以一直查看最细类（随便用着吧）</p>
     <section class="items-wrap">
       <div class="items-list">
         <!-- <div class="items-card" v-for="(item, i) in items" :key="i">
@@ -24,7 +25,7 @@ const items = ref(data);
 @import './App.less';
 .items-list {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 16px;
   justify-items: center;
 }

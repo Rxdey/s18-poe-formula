@@ -133,17 +133,12 @@ onMounted(() => {
     display: flex;
     flex-flow: row;
     align-items: center;
-    .item-icon-wrap {
-      &:hover {
-        transform: scale(1.1);
-      }
-    }
   }
   &.pop-box {
     position: absolute;
     bottom: 50%;
     transform: translateY(50%);
-    right: 150%;
+    left: 150%;
     background-color: rgba(10, 10, 10, 0.8);
     padding: 16px;
     border-radius: 8px;
